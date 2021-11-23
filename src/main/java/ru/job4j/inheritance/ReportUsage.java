@@ -9,7 +9,7 @@ public class ReportUsage {
         String textHtml = reportHtml.generate("Report's name", "Report's body");
         System.out.println(textHtml);
         JSONReport reportJson = new JSONReport();
-        String JSONReport = reportJson.generate("Report's name", "Report's body");
-        System.out.println(JSONReport);
+        String jsonreport = reportJson.generate("Report's name", "Report's body");
+        System.out.println(jsonreport);
     }
 }
