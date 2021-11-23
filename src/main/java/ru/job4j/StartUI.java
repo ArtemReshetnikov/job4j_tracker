@@ -7,10 +7,10 @@ import java.time.format.DateTimeFormatter;
 
 public class StartUI {
     public static void main(String[] args) {
-        Item item = new Item();
-        LocalDateTime Item = item.getCreated();
+        Item time = new Item();
+        LocalDateTime now = time.getCreated();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        String currentDateTimeFormat = Item.format(formatter);
+        String currentDateTimeFormat = now.format(formatter);
         System.out.println("Текущие дата и время после форматирования: " + currentDateTimeFormat);
     }
 }
