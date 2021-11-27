@@ -1,6 +1,18 @@
 package ru.job4j.pojo;
 
 public class Shop {
+    public static int indexOfNull(Product[] products) {
+        int rsl = -1;
+        for (int i = 0; i < products.length; i++) {
+            if (products[i] == null) {
+                rsl = i;
+                break;
+
+            }
+        }
+        return rsl;
+    }
+
     public static void main(String[] args) {
         Product[] products = new Product[5];
         products[0] = new Product("Milk", 10);
@@ -13,17 +25,5 @@ public class Shop {
             }
         }
         System.out.println("Индекс первой ячейки с null значением: " + indexOfNull(products));
-    }
-
-    public static int indexOfNull(Product[] products) {
-        int rsl = -1;
-        for (int i = 0; i < products.length; i++) {
-            if (products[i] == null) {
-                rsl = i;
-                break;
-
-            }
-        }
-        return rsl;
     }
 }
