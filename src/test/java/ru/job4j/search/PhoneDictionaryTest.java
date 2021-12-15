@@ -25,6 +25,6 @@ public class PhoneDictionaryTest {
         );
         ArrayList<Person> persons = phones.find("Elon");
         ArrayList<Person> findPerson = new ArrayList<>();
-        assertThat(persons, is(findPerson) );
+        assertThat(persons, is(findPerson));
     }
 }
