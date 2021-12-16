@@ -35,7 +35,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
-        List<UserAction> actions = Arrays.asList (
+        List<UserAction> actions = Arrays.asList(
                 new EditAction(out),
                 new ExitAction(out)
         );
@@ -51,7 +51,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
         );
-        List<UserAction> actions = Arrays.asList (
+        List<UserAction> actions = Arrays.asList(
                 new DeleteAction(out),
                 new ExitAction(out)
         );
@@ -86,7 +86,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(one.getId()), replaceName, "1"}
         );
-        List<UserAction> actions = Arrays.asList (
+        List<UserAction> actions = Arrays.asList(
                 new EditAction(out),
                 new ExitAction(out)
         );
@@ -113,7 +113,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "1"}
         );
-        List<UserAction> actions = Arrays.asList (
+        List<UserAction> actions = Arrays.asList(
                 new ShowAllAction(out),
                 new ExitAction(out)
         );
@@ -140,7 +140,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(one.getId()), "1"}
         );
-        List<UserAction> actions = Arrays.asList (
+        List<UserAction> actions = Arrays.asList(
                 new FindByIdAction(out),
                 new ExitAction(out)
         );
@@ -167,7 +167,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", one.getName(), "1"}
         );
-        List<UserAction> actions = Arrays.asList (
+        List<UserAction> actions = Arrays.asList(
                 new FindByNameAction(out),
                 new ExitAction(out)
         );
