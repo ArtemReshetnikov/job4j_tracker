@@ -21,6 +21,6 @@ public class PassportOfficeTest {
         Citizen citizen = new Citizen("2f44a", "Petr Arsentev");
         Citizen duplicate = new Citizen("2f44a", "Petr Arsentev");
         office.add(citizen);
-        assertFalse(!office.add(duplicate));
+        assertFalse(office.add(duplicate));
     }
 }
