@@ -11,14 +11,14 @@ public class ItemAscByNameTest {
     @Test
     public void compare() {
         List<Item> items = Arrays.asList(
-        new Item("Benicio", 1),
-        new Item("Lea", 2),
-        new Item("Bill", 3)
+        new Item("Benicio"),
+        new Item("Lea"),
+        new Item("Bill")
         );
         List<Item> expected = Arrays.asList(
-        new Item("Benicio", 1),
-        new Item("Bill", 3),
-        new Item("Lea", 2)
+        new Item("Benicio"),
+        new Item("Bill"),
+        new Item("Lea")
         );
         Collections.sort(items, new ItemAscByName());
         assertEquals(items, expected);
