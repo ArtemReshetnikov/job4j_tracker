@@ -67,4 +67,8 @@ public class Item {
                 + ", created=" + created.format(FORMATTER)
                 + '}';
     }
+
+    public int compareTo(Item another) {
+        return CharSequence.compare(name, another.name);
+    }
 }
