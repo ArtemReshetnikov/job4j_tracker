@@ -14,14 +14,14 @@ public class ItemDescByNameTest {
     @Test
     public void compare() {
         List<Item> items = Arrays.asList(
-                new Item("A", 1),
-                new Item("B", 2),
-                new Item("C", 3)
+                new Item("A"),
+                new Item("B"),
+                new Item("C")
         );
         List<Item> expected = Arrays.asList(
-                new Item("C", 3),
-                new Item("B", 2),
-                new Item("A", 1)
+                new Item("C"),
+                new Item("B"),
+                new Item("A")
         );
         Collections.sort(items, new ItemDescByName());
         assertEquals(items, expected);
@@ -30,18 +30,18 @@ public class ItemDescByNameTest {
     @Test
     public void compareMore() {
         List<Item> items = Arrays.asList(
-                new Item("Andrei", 1),
-                new Item("Ginger", 2),
-                new Item("Anton", 3),
-                new Item("August", 4),
-                new Item("Marico", 5)
+                new Item("Andrei"),
+                new Item("Ginger"),
+                new Item("Anton"),
+                new Item("August"),
+                new Item("Marico")
         );
         List<Item> expected = Arrays.asList(
-                new Item("Andrei", 1),
-                new Item("Ginger", 2),
-                new Item("Anton", 3),
-                new Item("August", 4),
-                new Item("Marico", 5)
+                new Item("Andrei"),
+                new Item("Ginger"),
+                new Item("Anton"),
+                new Item("August"),
+                new Item("Marico")
         );
         Collections.sort(items, new ItemDescByName());
         assertNotEquals(items, expected);

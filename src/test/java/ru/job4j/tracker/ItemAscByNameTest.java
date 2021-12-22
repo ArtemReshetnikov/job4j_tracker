@@ -27,16 +27,16 @@ public class ItemAscByNameTest {
     @Test
     public void compareMore() {
         List<Item> items = Arrays.asList(
-                new Item("Andrei", 1),
-                new Item("Ginger", 2),
-                new Item("Anton", 3),
-                new Item("August", 4),
-                new Item("Marico", 5)
+                new Item("Andrei"),
+                new Item("Ginger"),
+                new Item("Anton"),
+                new Item("August"),
+                new Item("Marico")
         );
         List<Item> expected = Arrays.asList(
-                new Item("Benicio", 1),
-                new Item("Bill", 3),
-                new Item("Lea", 2)
+                new Item("Benicio"),
+                new Item("Bill"),
+                new Item("Lea")
         );
         Collections.sort(items, new ItemAscByName());
         assertNotEquals(items, expected);
