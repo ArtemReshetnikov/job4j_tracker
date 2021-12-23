@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class ItemDescByNameTest {
 
     @Test
-    public void compare() {
+    public void whenSortItemByNameDesc() {
         List<Item> items = Arrays.asList(
                 new Item("A"),
                 new Item("B"),
@@ -25,25 +25,5 @@ public class ItemDescByNameTest {
         );
         Collections.sort(items, new ItemDescByName());
         assertEquals(items, expected);
-    }
-
-    @Test
-    public void compareMore() {
-        List<Item> items = Arrays.asList(
-                new Item("Andrei"),
-                new Item("Ginger"),
-                new Item("Anton"),
-                new Item("August"),
-                new Item("Marico")
-        );
-        List<Item> expected = Arrays.asList(
-                new Item("Andrei"),
-                new Item("Ginger"),
-                new Item("Anton"),
-                new Item("August"),
-                new Item("Marico")
-        );
-        Collections.sort(items, new ItemDescByName());
-        assertNotEquals(items, expected);
     }
 }
