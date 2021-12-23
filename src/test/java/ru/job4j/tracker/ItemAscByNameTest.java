@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class ItemAscByNameTest {
 
     @Test
-    public void whenSortItemByNameAsc () {
+    public void whenSortItemByNameAsc() {
         List<Item> items = Arrays.asList(
         new Item("Benicio"),
         new Item("Lea"),
