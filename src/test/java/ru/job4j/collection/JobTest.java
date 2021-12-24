@@ -44,7 +44,7 @@ public class JobTest {
                 new Job("Alpha"),
                 new Job("Beta")
         );
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl, lessThan(0));
     }
 
     @Test
@@ -58,9 +58,9 @@ public class JobTest {
     }
 
     @Test
-    public void whenSecondMPriorityThatFirst() {
-        Comparator<Job> cmpDescName = new JobDescByName();
-        int rsl = cmpDescName.compare(
+    public void whenSecondPriorityThatFirst() {
+        Comparator<Job> cmpDescPriority = new JobDescByPriority();
+        int rsl = cmpDescPriority.compare(
                 new Job("Alpha", 1),
                 new Job("Beta", 2)
         );
@@ -69,11 +69,11 @@ public class JobTest {
 
     @Test
     public void whenFirstMPriorityThatSecond() {
-        Comparator<Job> cmpAscName = new JobAscByName();
-        int rsl = cmpAscName.compare(
-                new Job("Alpha", 3),
+        Comparator<Job> cmpAscPriority = new JobAscByPriority();
+        int rsl = cmpAscPriority.compare(
+                new Job("Alpha", 1),
                 new Job("Beta", 2)
         );
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl, lessThan(0));
     }
 }
