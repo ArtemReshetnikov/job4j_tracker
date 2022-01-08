@@ -24,7 +24,7 @@ public class AttachmentSort {
         Comparator<Attachment> attachmentComp =  new Comparator<Attachment>() {
             @Override
             public int compare(Attachment left, Attachment right) {
-                return left.getSize() - right.getSize();
+                return left.getName().compareTo(right.getName());
             }
         };
         attachments.sort(attachmentComp);
